@@ -1,0 +1,22 @@
+{
+  "name": "algo-lambda",
+  "version": "0.0.1",
+  "description": "AWS Lambda Wrapper for Algorithmia functions",
+  "main": "./serverless.js",
+  "keywords": [
+    "aws",
+    "lambda",
+    "algorithmia",
+    "wrapper",
+    "proxy"
+  ],
+  "author": "Rowell Belen",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@serverless/core": "latest",
+    "@serverless/aws-lambda": "latest"
+  }
+}
