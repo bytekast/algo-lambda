@@ -1,6 +1,6 @@
 {
   "name": "algo-lambda",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "AWS Lambda Wrapper for Algorithmia functions",
   "main": "./serverless.js",
   "keywords": [
@@ -16,7 +16,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@serverless/core": "latest",
-    "@serverless/aws-lambda": "latest"
+    "@serverless/core": "1.1.1",
+    "@serverless/aws-lambda": "3.0.0",
+    "algorithmia": "^0.3.10"
   }
 }

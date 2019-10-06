@@ -1,8 +1,12 @@
-const Algorithmia = require("algorithmia");
+const algorithmia = require("algorithmia");
+
+function isPrimitive(test) {
+  return (test !== Object(test));
+}
 
 module.exports.lambda = async (event, context) => {
-  const input = event || "";
-  const response = await Algorithmia.client(process.env.apiKey)
+  const input = isPrimitive(event) ? event : JSON.stringify(event);
+  const response = await algorithmia.client(process.env.apiKey)
     .algo(process.env.algorithm)
     .pipe(input)
 

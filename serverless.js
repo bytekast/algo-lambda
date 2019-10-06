@@ -10,12 +10,12 @@ class AlgoLambda extends Component {
     this.context.status('Deploying AWS Lambda Wrapper')
     const lambdaInputs = {}
     lambdaInputs.name = inputs.name
-    lambdaInputs.handler = 'index.lambda'
+    lambdaInputs.handler = './node_modules/algo-lambda/index.lambda'
     lambdaInputs.runtime = 'nodejs10.x'
     lambdaInputs.region = inputs.region
     lambdaInputs.timeout = inputs.timeout || 7
     lambdaInputs.memory = inputs.memory || 128
-    lambdaInputs.code = './node_modules/@bytekast/algo-lambda'
+    lambdaInputs.code = process.cwd()
     lambdaInputs.env = inputs.env || {}
     lambdaInputs.description = 'A lambda wrapper for Algorithmia functions'
     const awsLambda = await this.load('@serverless/aws-lambda')
