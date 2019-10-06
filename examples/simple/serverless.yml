@@ -1,0 +1,8 @@
+name: simple
+
+summarizer:
+  component: 'algo-lambda'
+  inputs:
+    env:
+      apiKey: ${env.ALGORITHMIA_API_KEY}
+      algorithm: 'nlp/Summarizer/0.1.8'

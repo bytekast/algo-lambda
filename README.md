@@ -42,7 +42,7 @@ summarizer:
   inputs:
     env:
       apiKey: 'YOUR_ALGORITHMIA_API_KEY'
-      algorithm: 'nlp/Summarizer/0.1.8'
+      algorithm: 'nlp/Summarizer/0.1.8' # See Algorithmia marketplace
 ```
 
 In the same directory, create a `package.json` file with the following contents:
@@ -56,6 +56,8 @@ In the same directory, create a `package.json` file with the following contents:
 ```
 
 Run `npm install`
+
+See example [here](./examples/simple).
 
 ### 3. Deploy
 
