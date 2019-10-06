@@ -2,7 +2,7 @@
 
 &nbsp;
 
-This is a simple Serverless Framework Component that creates a Lambda wrapper to an [Algorithmia](https://algorithmia.com) function. With a Lambda wrapper, an Algorithmia function can be triggered by AWS Events. 
+This is a simple [Serverless Framework Component](https://serverless.com/components/) that creates a Lambda wrapper to an [Algorithmia](https://algorithmia.com) function. With a Lambda wrapper, an Algorithmia function can be triggered by AWS Events - such as SNS, SQS, etc. 
 
 &nbsp;
 
