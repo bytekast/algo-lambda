@@ -1,18 +1,14 @@
-const {Component, utils} = require('@serverless/core')
+const {Component} = require('@serverless/core')
 
 class AlgoLambda extends Component {
 
   async default(inputs = {}) {
-
-    inputs.name = this.state.name || inputs.name || this.context.resourceId()
-    inputs.region = inputs.region || 'us-east-1'
-
     this.context.status('Deploying AWS Lambda Wrapper')
     const lambdaInputs = {}
-    lambdaInputs.name = inputs.name
+    lambdaInputs.name = inputs.name || this.context.resourceId()
     lambdaInputs.handler = './node_modules/algo-lambda/index.lambda'
     lambdaInputs.runtime = 'nodejs10.x'
-    lambdaInputs.region = inputs.region
+    lambdaInputs.region = inputs.region || 'us-east-1'
     lambdaInputs.timeout = inputs.timeout || 7
     lambdaInputs.memory = inputs.memory || 128
     lambdaInputs.code = process.cwd()
