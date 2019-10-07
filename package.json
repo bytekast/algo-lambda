@@ -1,6 +1,6 @@
 {
   "name": "algo-lambda",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "AWS Lambda Wrapper for Algorithmia functions",
   "main": "./serverless.js",
   "keywords": [
